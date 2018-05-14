@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0524FECF20A927E300E0F837 /* Neuron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0524FECD20A927E300E0F837 /* Neuron.cpp */; };
+		0524FED320A9284000E0F837 /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0524FED120A9284000E0F837 /* Network.cpp */; };
+		0524FEDD20A92A7A00E0F837 /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0524FEDB20A92A7A00E0F837 /* Trainer.cpp */; };
 		057512F0204496D60007FE76 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 057512EF204496D60007FE76 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +26,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0524FEC920A926D500E0F837 /* xor.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = xor.dat; sourceTree = "<group>"; };
+		0524FECD20A927E300E0F837 /* Neuron.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Neuron.cpp; sourceTree = "<group>"; };
+		0524FED020A9281F00E0F837 /* Neuron.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Neuron.hpp; sourceTree = "<group>"; };
+		0524FED120A9284000E0F837 /* Network.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Network.cpp; sourceTree = "<group>"; };
+		0524FED220A9284000E0F837 /* Network.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Network.hpp; sourceTree = "<group>"; };
+		0524FEDB20A92A7A00E0F837 /* Trainer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Trainer.cpp; sourceTree = "<group>"; };
+		0524FEDC20A92A7A00E0F837 /* Trainer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
 		057512EC204496D60007FE76 /* NeuralNetwork_1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NeuralNetwork_1; sourceTree = BUILT_PRODUCTS_DIR; };
 		057512EF204496D60007FE76 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +48,52 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0524FED420A928D400E0F837 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				057512EF204496D60007FE76 /* main.cpp */,
+				0524FEDE20A92AEF00E0F837 /* Trainer */,
+				0524FED620A928E800E0F837 /* Neuron */,
+				0524FED720A928ED00E0F837 /* Network */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		0524FED520A928DB00E0F837 /* dat */ = {
+			isa = PBXGroup;
+			children = (
+				0524FEC920A926D500E0F837 /* xor.dat */,
+			);
+			path = dat;
+			sourceTree = "<group>";
+		};
+		0524FED620A928E800E0F837 /* Neuron */ = {
+			isa = PBXGroup;
+			children = (
+				0524FECD20A927E300E0F837 /* Neuron.cpp */,
+				0524FED020A9281F00E0F837 /* Neuron.hpp */,
+			);
+			path = Neuron;
+			sourceTree = "<group>";
+		};
+		0524FED720A928ED00E0F837 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				0524FED120A9284000E0F837 /* Network.cpp */,
+				0524FED220A9284000E0F837 /* Network.hpp */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		0524FEDE20A92AEF00E0F837 /* Trainer */ = {
+			isa = PBXGroup;
+			children = (
+				0524FEDB20A92A7A00E0F837 /* Trainer.cpp */,
+				0524FEDC20A92A7A00E0F837 /* Trainer.hpp */,
+			);
+			path = Trainer;
+			sourceTree = "<group>";
+		};
 		057512E3204496D60007FE76 = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +113,8 @@
 		057512EE204496D60007FE76 /* NeuralNetwork_1 */ = {
 			isa = PBXGroup;
 			children = (
-				057512EF204496D60007FE76 /* main.cpp */,
+				0524FED420A928D400E0F837 /* core */,
+				0524FED520A928DB00E0F837 /* dat */,
 			);
 			path = NeuralNetwork_1;
 			sourceTree = "<group>";
@@ -119,6 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0524FECF20A927E300E0F837 /* Neuron.cpp in Sources */,
+				0524FEDD20A92A7A00E0F837 /* Trainer.cpp in Sources */,
+				0524FED320A9284000E0F837 /* Network.cpp in Sources */,
 				057512F0204496D60007FE76 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
