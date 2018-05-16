@@ -10,6 +10,7 @@
 		0524FECF20A927E300E0F837 /* Neuron.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0524FECD20A927E300E0F837 /* Neuron.cpp */; };
 		0524FED320A9284000E0F837 /* Network.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0524FED120A9284000E0F837 /* Network.cpp */; };
 		0524FEDD20A92A7A00E0F837 /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0524FEDB20A92A7A00E0F837 /* Trainer.cpp */; };
+		0524FEEC20A93FBC00E0F837 /* NetworkController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0524FEEA20A93FBC00E0F837 /* NetworkController.cpp */; };
 		057512F0204496D60007FE76 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 057512EF204496D60007FE76 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,10 @@
 		0524FED220A9284000E0F837 /* Network.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Network.hpp; sourceTree = "<group>"; };
 		0524FEDB20A92A7A00E0F837 /* Trainer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Trainer.cpp; sourceTree = "<group>"; };
 		0524FEDC20A92A7A00E0F837 /* Trainer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Trainer.hpp; sourceTree = "<group>"; };
+		0524FEE220A92D2400E0F837 /* ex.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = ex.dat; sourceTree = "<group>"; };
+		0524FEE720A938B600E0F837 /* tst.dat */ = {isa = PBXFileReference; lastKnownFileType = text; path = tst.dat; sourceTree = "<group>"; };
+		0524FEEA20A93FBC00E0F837 /* NetworkController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NetworkController.cpp; sourceTree = "<group>"; };
+		0524FEEB20A93FBC00E0F837 /* NetworkController.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = NetworkController.hpp; sourceTree = "<group>"; };
 		057512EC204496D60007FE76 /* NeuralNetwork_1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = NeuralNetwork_1; sourceTree = BUILT_PRODUCTS_DIR; };
 		057512EF204496D60007FE76 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -48,35 +53,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0524FED420A928D400E0F837 /* core */ = {
-			isa = PBXGroup;
-			children = (
-				057512EF204496D60007FE76 /* main.cpp */,
-				0524FEDE20A92AEF00E0F837 /* Trainer */,
-				0524FED620A928E800E0F837 /* Neuron */,
-				0524FED720A928ED00E0F837 /* Network */,
-			);
-			path = core;
-			sourceTree = "<group>";
-		};
-		0524FED520A928DB00E0F837 /* dat */ = {
+		0524FEE320A9355300E0F837 /* data */ = {
 			isa = PBXGroup;
 			children = (
 				0524FEC920A926D500E0F837 /* xor.dat */,
+				0524FEE220A92D2400E0F837 /* ex.dat */,
+				0524FEE720A938B600E0F837 /* tst.dat */,
 			);
-			path = dat;
+			path = data;
 			sourceTree = "<group>";
 		};
-		0524FED620A928E800E0F837 /* Neuron */ = {
+		0524FEE420A935F000E0F837 /* Neural Network */ = {
 			isa = PBXGroup;
 			children = (
-				0524FECD20A927E300E0F837 /* Neuron.cpp */,
-				0524FED020A9281F00E0F837 /* Neuron.hpp */,
+				0524FEED20A93FC200E0F837 /* Controller */,
+				0524FEE920A93E3F00E0F837 /* Neuron */,
+				0524FEE820A93E3800E0F837 /* Network */,
 			);
-			path = Neuron;
+			path = "Neural Network";
 			sourceTree = "<group>";
 		};
-		0524FED720A928ED00E0F837 /* Network */ = {
+		0524FEE520A935F800E0F837 /* Trainer */ = {
+			isa = PBXGroup;
+			children = (
+				0524FEDB20A92A7A00E0F837 /* Trainer.cpp */,
+				0524FEDC20A92A7A00E0F837 /* Trainer.hpp */,
+			);
+			path = Trainer;
+			sourceTree = "<group>";
+		};
+		0524FEE820A93E3800E0F837 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				0524FED120A9284000E0F837 /* Network.cpp */,
@@ -85,13 +91,22 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		0524FEDE20A92AEF00E0F837 /* Trainer */ = {
+		0524FEE920A93E3F00E0F837 /* Neuron */ = {
 			isa = PBXGroup;
 			children = (
-				0524FEDB20A92A7A00E0F837 /* Trainer.cpp */,
-				0524FEDC20A92A7A00E0F837 /* Trainer.hpp */,
+				0524FECD20A927E300E0F837 /* Neuron.cpp */,
+				0524FED020A9281F00E0F837 /* Neuron.hpp */,
 			);
-			path = Trainer;
+			path = Neuron;
+			sourceTree = "<group>";
+		};
+		0524FEED20A93FC200E0F837 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0524FEEA20A93FBC00E0F837 /* NetworkController.cpp */,
+				0524FEEB20A93FBC00E0F837 /* NetworkController.hpp */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		057512E3204496D60007FE76 = {
@@ -113,8 +128,10 @@
 		057512EE204496D60007FE76 /* NeuralNetwork_1 */ = {
 			isa = PBXGroup;
 			children = (
-				0524FED420A928D400E0F837 /* core */,
-				0524FED520A928DB00E0F837 /* dat */,
+				057512EF204496D60007FE76 /* main.cpp */,
+				0524FEE520A935F800E0F837 /* Trainer */,
+				0524FEE420A935F000E0F837 /* Neural Network */,
+				0524FEE320A9355300E0F837 /* data */,
 			);
 			path = NeuralNetwork_1;
 			sourceTree = "<group>";
@@ -145,7 +162,7 @@
 		057512E4204496D60007FE76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = BCR;
 				TargetAttributes = {
 					057512EB204496D60007FE76 = {
@@ -176,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0524FEEC20A93FBC00E0F837 /* NetworkController.cpp in Sources */,
 				0524FECF20A927E300E0F837 /* Neuron.cpp in Sources */,
 				0524FEDD20A92A7A00E0F837 /* Trainer.cpp in Sources */,
 				0524FED320A9284000E0F837 /* Network.cpp in Sources */,
@@ -200,6 +218,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -207,6 +226,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -255,6 +275,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -262,6 +283,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

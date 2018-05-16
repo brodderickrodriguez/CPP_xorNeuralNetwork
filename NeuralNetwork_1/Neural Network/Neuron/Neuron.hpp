@@ -11,37 +11,34 @@
 #include <vector>
 #include <cmath>
 
-struct Connection
-{
+struct Connection {
     double weight, deltaWeight;
 }; // Connection
 
 class Neuron;
 typedef std::vector<Neuron> Layer;
 
-class Neuron
-{
+class Neuron {
 public:
     Neuron(unsigned numOutputs, unsigned myIndex);
-    double getOutputVal(void) const { return m_outputVal; }
     void setOutputVal(double val) { m_outputVal = val; }
+    double getOutputVal(void) const { return m_outputVal; }
     void feedForward(const Layer &prevLayer);
-    void calcOutputGradients(double targetVal);
+    void calcOutputGradients(double targetVals);
     void calcHiddenGradients(const Layer &nextLayer);
     void updateInputWeights(Layer &prevLayer);
 private:
-    static double transferFunction(double x) { return tanh(x); }
-    static double transferFunctionDerivative(double x) { return 1 - x * x; }
+    static double eta; // [0.0...1.0] overall net training rate
+    static double alpha; // [0.0...n] multiplier of last weight change [momentum]
+    static double transferFunction(double x);
+    static double transferFunctionDerivative(double x);
+    // randomWeight: 0 - 1
     static double randomWeight(void) { return rand() / double(RAND_MAX); }
     double sumDOW(const Layer &nextLayer) const;
-    const double eta = 0.01;    // modulate output val
-    const double alpha = 0.01;  // modulate delta weight
     double m_outputVal;
-    double m_gradient;
-    unsigned m_myIndex;
     std::vector<Connection> m_outputWeights;
+    unsigned m_myIndex;
+    double m_gradient;
 }; // Neuron
-
-
 
 #endif /* Neuron_h */
